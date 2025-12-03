@@ -80,7 +80,14 @@
 
     .glass-btn .iconwrap{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
 
-    .glass-btn .ribbon{position:absolute;right:14px;top:14px;padding:6px 10px;border-radius:999px;font-size:12px;background:linear-gradient(90deg,#ffffff22,#ffffff11);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.08);color: #ffffff;} /* Сделано светлее */
+    .glass-btn .ribbon{
+      position:absolute;right:14px;top:14px;padding:6px 10px;border-radius:999px;font-size:12px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.15), rgba(255,255,255,0.08)) !important; /* Явно задаем фон */
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      border:1px solid rgba(255,255,255,0.12);
+      color: #ffffff;
+    }
 
     /* masked / coming soon tiles */
     .mystery{
@@ -115,7 +122,11 @@
 
     /* reveal animation for soon masked items */
     .blurred{filter:blur(4px);opacity:0.8}
-    .coming-soon{position:absolute;right:12px;bottom:12px;font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(90deg,#ffffff06,#ffffff02)}
+    .coming-soon{
+      position:absolute;right:12px;bottom:12px;font-size:12px;padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
+    }
 
     /* controls */
     .controls{display:flex;gap:8px}
@@ -149,6 +160,16 @@
       .card {
         margin-top: 0;
         padding: 20px; 
+      }
+      
+      .glass-btn .ribbon {
+        background: linear-gradient(90deg, rgba(255,255,255,0.15), rgba(255,255,255,0.08)) !important;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        border:1px solid rgba(255,255,255,0.12);
+      }
+      .coming-soon {
+        background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) !important;
       }
     }
 
